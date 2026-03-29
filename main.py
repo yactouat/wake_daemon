@@ -40,7 +40,7 @@ INFERENCE_BYTES = INFERENCE_SAMPLES * BYTES_PER_FRAME
 # Smaller PortAudio buffer => callback fires more often; main thread still consumes in 1280-sample steps
 FRAMES_PER_BUFFER = 512
 
-DEFAULT_WAKE_PHRASE = "hey jarvis"  # also try "alexa", "hey mycroft", etc. (see openwakeword.MODELS)
+DEFAULT_WAKE_PHRASE = "yo Chrome"  # also try "alexa", "hey mycroft", etc. (see openwakeword.MODELS)
 DEFAULT_THRESHOLD = 0.5
 DEFAULT_COOLDOWN_S = 2.0
 
@@ -68,7 +68,7 @@ def _build_model(wake_phrase: str) -> Model:
     `device='cpu'` is forwarded to AudioFeatures inside openWakeWord.
     """
     return Model(
-        wakeword_models=[wake_phrase],
+        wakeword_models=["/home/yactouat/.openclaw/overlay/wake_daemon/yo_chrome.onnx"],
         inference_framework="onnx",
         device="cpu",
         ncpu=1,
