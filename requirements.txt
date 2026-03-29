@@ -1,0 +1,12 @@
+# Runtime dependencies (CPU / ONNX path).
+# After `pip install -r requirements.txt`, install openWakeWord without pulling broken Linux
+# `tflite-runtime` pins on Python 3.12:
+#   pip install "openwakeword>=0.6.0" --no-deps
+# Minimums match openWakeWord’s typical stack; no upper caps so pip can track current stable releases.
+onnxruntime>=1.16.0
+numpy>=1.24.0
+PyAudio>=0.2.14
+scipy>=1.9.0
+scikit-learn>=1.2.0
+requests>=2.28.0
+tqdm>=4.64.0
